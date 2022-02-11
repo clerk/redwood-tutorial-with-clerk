@@ -1,5 +1,6 @@
 import { Link, routes } from '@redwoodjs/router'
 import { useAuth } from '@redwoodjs/auth'
+import { SignInButton, UserButton } from '@clerk/clerk-react'
 
 const BlogLayout = ({ children }) => {
   const { logIn, logOut, isAuthenticated, currentUser } = useAuth()
@@ -33,23 +34,21 @@ const BlogLayout = ({ children }) => {
                 Contact
               </Link>
             </li>
-            <li>
+            <li className={isAuthenticated ? 'ml-2' : null}>
               {isAuthenticated ? (
-                <div>
-                  <button type="button" onClick={logOut} className="py-2 px-4">
-                    Logout
-                  </button>
-                </div>
+                <UserButton afterSignOutAll={window.location.href} />
               ) : (
-                <Link to={routes.login()} className="py-2 px-4">
-                  Login
-                </Link>
+                <SignInButton mode="modal">
+                  <button className="py-2 px-4 hover:bg-blue-600 transition duration-100 rounded">
+                    Log in
+                  </button>
+                </SignInButton>
               )}
             </li>
           </ul>
           {isAuthenticated && (
-            <div className="absolute bottom-1 right-0 mr-12 text-xs text-blue-300">
-              {currentUser.email}
+            <div className="text-right text-xs text-blue-300">
+              {currentUser?.emailAddresses[0]?.emailAddress}
             </div>
           )}
         </nav>
