@@ -1,18 +1,14 @@
-# Redwood Tutorial App
+# Redwood Tutorial App with Clerk
 
-This repo represents the final state of the app created during the [Redwood Tutorial](https://redwoodjs.com/tutorial).
-It is meant to be a starting point for those working on the [Tutorial Part 2](https://redwoodjs.com/tutorial2).
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/clerkinc/redwood-tutorial-with-clerk) [![Clerk documentation](https://img.shields.io/badge/documentation-clerk-green.svg)](https://docs.clerk.dev) [![@ClerkDev on Twitter](https://img.shields.io/twitter/follow/ClerkDev?style=social)](https://twitter.com/intent/follow?screen_name=ClerkDev)
 
-This repo contains much more styling than the one we built together in the tutorial, but is functionally identical.
+This repo is based on a fork of the official [Redwood Tutorial repo](https://github.com/redwoodjs/redwood-tutorial) and represents the final state of the app created during the [Redwood Tutorial](https://redwoodjs.com/tutorial) with the addition of Clerk as the authentication provider.
 
-## Setup
+You can follow along with [this guide](https://clerk.dev/tutorials/redwoodjs-tutorial-with-clerk) to integrate Clerk with RedwoodJS. You can also use this repo as the basis for further exploration with Redwood. Happy trails! 🌲
 
-The [tutorial itself](https://redwoodjs.com/tutorial2/prerequisites) contains instructions for getting this repo up and running, but here is a summary of the commands:
+![Redwood Tutorial with Clerk cover image](./docs/cover.jpg)
 
-```bash
-git clone https://github.com/redwoodjs/redwood-tutorial
-cd redwood-tutorial
-yarn install
-yarn rw prisma migrate dev
-yarn rw dev
-```
+## Contact
+
+If you need support or have anything you would like to ask, please reach out on our [Discord channel](https://discord.com/invite/b5rXHjAg7A). We'd love to chat!
+
